@@ -9,19 +9,19 @@ The path to a good visualization is going to involve mistakes and wrong turns.
 It is therefore important to recognize that mistakes are valuable in finding the path to a solution, to broadly explore the design space, and to iterate designs to improve possible solutions. 
 To help you explore the design space, we will hold events such as feedback sessions in which you propose your idea and initial designs and receive feedback from the class and staff.
 
-Proposing Ideas (due Apr 05 Monday)
+Proposing Ideas (due Mar X)
 ---
 
 Submit project proposals using [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSePvr2yyOwT-iwl-mVsYL5lNSJIwEx7Lius6Q8_5Tm2WxX6nA/viewform?usp=sf_link).
 You may submit more than one proposal.
 1-3 folks per team.
 
-Prospectus (due Apr 16 Friday)
+Prospectus (due Mar X)
 ---
 
 After choosing your topic and forming your team. Create a brief PDF writeup with more detail using the prospectus repo (a separate repository). After submitting, we will go over your PDFs in team + professor meetings on Zoom to discuss feedback on scope, ideas, etc.
 
-Final Project Materials (due May 10 Monday)
+Final Project Materials (due May X)
 ---
 For your final project you must hand in the following items.
 
