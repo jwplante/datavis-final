@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { GeoJSON } from 'geojson';
+import ContinentView from 'components/ContinentView';
 
 function App () {
+  const [continentDataset, setContinentDataset] = useState<GeoJSON | null>(null);
+
+  useEffect(() => {
+    // Grab the dataset from the local server
+    fetch('/data/continents.json')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        setContinentDataset(data);
+      })
+      .catch(err => console.log(`Data could not be loaded! Error: ${err}`));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      { (continentDataset) ? <ContinentView borderData={continentDataset} /> : <p>Loading Dataset</p> }
+    </>
   );
 }
 
