@@ -1,0 +1,26 @@
+{
+  "name": "datavis-final-server",
+  "version": "1.0.0",
+  "description": "Server for CS573 Final Project",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "cd frontend && npm run build && cd .. && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwplante/datavis-final.git"
+  },
+  "author": "James Plante and Alicia Howell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwplante/datavis-final/issues"
+  },
+  "homepage": "https://github.com/jwplante/datavis-final#readme",
+  "dependencies": {
+    "@types/geojson": "^7946.0.8",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "path": "^0.12.7"
+  }
+}
