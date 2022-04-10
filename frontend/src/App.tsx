@@ -7,11 +7,12 @@ function App () {
 
   useEffect(() => {
     // Grab the dataset from the local server
-    fetch('/data/continents.json')
+    fetch('/data/map.geo.json')
       .then(res => {
         return res.json();
       })
       .then(data => {
+        // Filter the data
         setContinentDataset(data);
       })
       .catch(err => console.log(`Data could not be loaded! Error: ${err}`));
