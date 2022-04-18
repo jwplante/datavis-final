@@ -10,9 +10,16 @@ import path from "path";
 const app = express();
 const port = Number(process.env.PORT_NUMBER);
 
+// Logger
+const logRequest = (req, res, next) => {
+  console.log(`[INFO] New request from ${req.ip} for URL ${req.originalUrl}, method ${req.method}`)
+  next()
+};
+
 // Routes
-app.use('/data', express.static("data"));
-app.use('/', express.static(path.join("frontend", "build")));
+app.use('/data', express.static("data"), logRequest);
+app.use('/', express.static(path.join("frontend", "build")), logRequest);
+
 
  // Start the server
 app.listen(port, () => {

@@ -5,7 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "cd frontend && npm run build && cd .. && node server.js"
+    "start": "node server.js",
+    "start-all": "cd frontend && npm run build && cd .. && node server.js"
   },
   "repository": {
     "type": "git",

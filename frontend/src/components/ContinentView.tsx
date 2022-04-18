@@ -13,7 +13,7 @@ export default function ContinentView (props: { borderData: GeoJSON }) {
     if (borderData.type === 'FeatureCollection' && rootSVG.current) {
       const proj = d3.geoEquirectangular()
         .translate([250, 250])
-        .scale(120);
+        .scale(300);
 
       const gpath = d3.geoPath()
         .projection(proj);
@@ -54,7 +54,7 @@ export default function ContinentView (props: { borderData: GeoJSON }) {
 
       const zoomSettings = d3.zoomIdentity
         .translate(250, 250)
-        .scale(120);
+        .scale(300);
 
       d3.select(rootSVG.current)
         .call(mapZoom)
