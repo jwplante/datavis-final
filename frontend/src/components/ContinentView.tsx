@@ -1,19 +1,21 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { GeoJSON } from 'geojson';
+import { Model } from 'types/Model';
 
 /**
  * Component that represents the d3 visualization of the map
  */
-export default function ContinentView (props: { borderData: GeoJSON }) {
+export default function ContinentView (props: { borderData: GeoJSON, dataModel: Model }) {
   const rootSVG = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     const borderData = props.borderData;
+
     if (borderData.type === 'FeatureCollection' && rootSVG.current) {
       const proj = d3.geoEquirectangular()
-        .translate([250, 250])
-        .scale(300);
+        .scale(500)
+        .center([50, 50]);
 
       const gpath = d3.geoPath()
         .projection(proj);
@@ -29,8 +31,31 @@ export default function ContinentView (props: { borderData: GeoJSON }) {
         .attr('d', function (d) { console.log(d); return gpath(d); })
         .attr('id', d => (d.id) ? d.id : '')
         .attr('stroke-width', 1)
-        .attr('stroke', 'gray')
-        .attr('fill', 'gray');
+        .attr('stroke', 'black')
+        .attr('fill', 'white');
+
+      d3.select(rootSVG.current)
+        .selectAll('g')
+        .data(props.dataModel.areas)
+        .enter()
+        .append('g')
+        .attr('id', d => d.name)
+        .selectAll('circle')
+        .data(d => d.languages.flatMap(d => {
+          const languageNames = Object.keys(d);
+          const locations = d[languageNames[0]].map((d, i) => { return { ...d, id: languageNames[i] }; });
+          return locations;
+        }))
+        .enter()
+        .append('circle')
+        .attr('class', d => d.id)
+        .attr('r', 1)
+        .attr('transform', (d) => {
+          return 'translate(' + proj([
+            d.longitude,
+            d.latitude
+          ]) + ')';
+        });
 
       const zoomed = (e : any) => {
         proj
@@ -47,14 +72,22 @@ export default function ContinentView (props: { borderData: GeoJSON }) {
         d3.select(rootSVG.current)
           .selectAll('path')
           .attr('d', (d : any) => gpath(d));
+
+        d3.select(rootSVG.current)
+          .selectAll('circle')
+          .attr('transform', (d: any) => {
+            return 'translate(' + proj([
+              d.longitude,
+              d.latitude
+            ]) + ')';
+          });
       };
 
       const mapZoom = d3.zoom<SVGSVGElement, unknown>()
         .on('zoom', zoomed);
 
       const zoomSettings = d3.zoomIdentity
-        .translate(250, 250)
-        .scale(300);
+        .scale(500);
 
       d3.select(rootSVG.current)
         .call(mapZoom)
