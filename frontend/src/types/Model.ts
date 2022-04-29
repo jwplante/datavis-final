@@ -5,11 +5,12 @@ export interface AreaLanguage {
   longitude: number;
   radius: number;
   population: number;
+  id: string;
 }
 
 export interface Area {
   name: string;
-  languages: { [key: string]: AreaLanguage[] }[];
+  languages: AreaLanguage[];
 }
 
 export interface Family {

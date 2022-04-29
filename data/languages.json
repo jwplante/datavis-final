@@ -22,133 +22,133 @@
     {
       "name": "Aslian",
       "languages": [
-        "249ee807-fc50-428a-9e26-fc83da3a0fc9",
-        "e94cde58-8961-4f9e-a04a-b3dcdb233859",
-        "10738735-c6e9-4845-8fe5-dacd2deffd3e",
-        "2b918b05-6164-456a-b573-6e88da16a809",
-        "38c9e240-8e8e-429a-b697-e3fc415ca73e",
-        "67c1979b-aa42-4776-9898-27ec214036e2",
-        "8c94cd94-4626-4209-a4be-c697d1957f81",
-        "98498c1f-73ec-46ad-b9bb-e551ad71d065",
-        "bcaca716-ac72-4ee4-b1c1-84ba01b40137",
-        "1fec4147-a5ba-4ae9-afca-1a5e46a400a9",
-        "5a344b94-a4e7-4af2-89b8-6a9f59cd0128",
-        "817de83b-4e23-4775-b967-9d3d57adcdb6",
-        "7e59d508-3691-4ba4-9e3d-81e1b4024379"
+        "Temoq",
+        "Mah Meri",
+        "Jah Hut",
+        "Cheq Wong",
+        "Semaq Beri",
+        "Jahai",
+        "Semai",
+        "Batek",
+        "Lanoh",
+        "Kintaq",
+        "Temiar",
+        "Kensiu",
+        "Minriq"
       ]
     },
     {
       "name": "Nicobarese",
       "languages": [
-        "237bf198-e5fb-44b8-b502-b3be00b34db6",
-        "36dee7f8-60e7-4369-89be-6056322511fc",
-        "7b8504ef-3a8d-4bfe-9d05-682831fb0778",
-        "467f9af2-33cc-4c5f-96a3-8fc05a26e4db",
-        "dba96e87-57dc-4a96-be93-82f625970a20",
-        "a2430811-4257-4cfc-98cf-4f6c9dda8159",
-        "67340c73-2943-41c1-a1a1-9e90fd9b2339",
-        "30666523-1e9d-484c-bf38-62a37db2e3f9",
-        "b90453c4-6cea-4bcd-a10c-5abca76428d8"
+        "Sambelong",
+        "Mon-Khmer",
+        "Shompen",
+        "Katchal",
+        "Nancowry",
+        "Camorta",
+        "Teressa",
+        "Car",
+        "Chaura"
       ]
     },
     {
       "name": "Pearic",
       "languages": [
-        "6d41ac91-a3ef-4ecb-805b-6c7e3a0c4e18",
-        "c4fc5bfa-177d-4571-9ba1-85830c580f66",
-        "0c4d111c-f148-498e-90f9-799272d63a48",
-        "242ba481-a364-4674-a9ff-40f953387b63",
-        "70607387-2d5d-4e49-8f9b-31c3ceef0238",
-        "a0daef95-35a9-4f87-9a81-08dd886a4ce4",
-        "02f257fb-0bc4-43c4-a89c-f358eb77a2c3",
-        "155708ee-02c4-4e67-8d3d-acf4f508a4cd"
+        "Chung",
+        "Old Khmeric",
+        "Song of Kampong Speu",
+        "Chong of Trat",
+        "Samre",
+        "Chong",
+        "Pear of Kampong Thom",
+        "Samrai"
       ]
     },
     {
       "name": "Bahnaric",
       "languages": [
-        "30288aa3-71c0-4f21-96fb-015067e10dae",
-        "56788a81-9bef-409d-a204-9ea9fe8cef5c",
-        "068c0f8a-b3d4-4f1d-a17c-5986472f1872",
-        "615b57da-c81e-4ab8-a58e-ff9d41fb682c"
+        "Sre",
+        "Bahnar",
+        "Mnong",
+        "Sedang"
       ]
     },
     {
       "name": "Khmeric",
       "languages": [
-        "8b2eecd8-7a85-47c1-948a-aeefd571ac89",
-        "c551dce5-4a9d-465d-8821-7abd2d13040a"
+        "Northern Khmer",
+        "Central Khmer"
       ]
     },
     {
       "name": "Katuic",
       "languages": [
-        "5e7097a6-4abf-4b0b-b0e8-939805dac882",
-        "f5971d6a-4420-4046-86f8-df958b024bfa",
-        "33acf776-c973-4bf0-98ed-2b735c13d4a7",
-        "d8c8a1ca-22e7-4940-8b3c-9b35e16fbfe4",
-        "4b84b042-2428-4530-bba9-802737fba6e8"
+        "Kataang",
+        "Eastern Katu",
+        "Upper Ta'oih",
+        "Eastern Bru",
+        "Kuy"
       ]
     },
     {
       "name": "Monic",
       "languages": [
-        "f51270b0-fcb5-482a-a3b4-73ad51ca7862",
-        "fb7f0439-a21d-4a87-8823-d953ad79e26c"
+        "Nyahkur",
+        "Mon"
       ]
     },
     {
       "name": "Munda",
       "languages": [
-        "c4edb0d6-21e5-4364-87ee-47152bd3dcfe",
-        "2b11fceb-3926-4edd-b971-e9b9afb70b57",
-        "ccaa0800-8012-4c01-89d4-0cfc11c61a51",
-        "89b00117-6374-475e-9d73-abeb34e9b7ef",
-        "6b614b6d-67c4-4f2f-bab5-e08501a639ed",
-        "12ab9be2-e499-469f-9d12-fe7935e6b211",
-        "af1db3ba-7268-4dc5-bb94-63b149f4e1d6"
+        "Sora",
+        "Mundari",
+        "Korku",
+        "Kharia",
+        "Bhumij",
+        "Ho",
+        "Santali"
       ]
     },
     {
       "name": "Palaungic",
       "languages": [
-        "40bc6606-612a-4754-9208-905a77b944d2",
-        "c6c87f22-9bb3-4d3e-8a4f-a1aba8269713",
-        "bb8009a3-4ae0-4470-8e20-0495f1d2cc8f",
-        "154e6638-2b3f-481e-a909-8b15bb692ee4",
-        "b53ab408-f3ec-4285-8982-31334110d82a",
-        "1906e8f6-4d01-4c2a-b6c3-455a092d3ffc",
-        "28f0cbf7-adb0-4b37-ae78-ab9c86dbb154",
-        "17eb6289-034c-476e-9478-8f683567d813",
-        "9fdbab1a-e705-478f-89dc-7206e4a7bef8",
-        "6a5bf42c-41f9-4479-b652-070006724969",
-        "939bbdf7-f90b-4969-8770-bf70603bb4ad",
-        "23174592-ec13-4497-a38c-9f7370ac4a78",
-        "1ee31dd6-b6d2-4119-8f78-aa64f9e2b6a4",
-        "138e3684-f47f-45d6-9ffc-c6f5d7697bc1",
-        "deb466de-5f9d-4aa2-bfef-a7d3d6aef332",
-        "5d83f2e6-584b-49f5-b1d3-0af1dd4a1b30"
+        "Riang",
+        "Kano",
+        "Kiorr",
+        "Lamet",
+        "Muak Sa-aak",
+        "Blang",
+        "Hu",
+        "Meung Yum",
+        "P'uman",
+        "Palaung ",
+        "Wa",
+        "Lawa",
+        "Savaiq",
+        "Mong Lue",
+        "Mang",
+        "Mok"
       ]
     },
     {
       "name": "Khmuic",
       "languages": [
-        "014d9212-88b1-487e-a521-867cf7eb0883"
+        "Khmu"
       ]
     },
     {
       "name": "Khasic",
       "languages": [
-        "ac6b8f51-abf9-44c8-ba31-d5c56026a7eb",
-        "435b8c85-910a-4953-90fc-5152489d8cb5",
-        "a278f9b2-de1a-4f05-bb6b-bbf4e61943bd"
+        "Pnar",
+        "Khasi",
+        "War Jaintia"
       ]
     },
     {
       "name": "Vietic",
       "languages": [
-        "c46df3db-ca3f-46dc-8123-ada725175e43",
-        "3b352076-87d3-4cb0-8985-4d8c7099b447"
+        "Muong",
+        "Vietnamese"
       ]
     }
   ],
@@ -783,8 +783,8 @@
       "target": "Nicobarese"
     },
     {
-    "source": "Austroasiatic",
-    "target": "Palaungic"
+      "source": "Austroasiatic",
+      "target": "Palaungic"
     },
     {
       "source": "Austroasiatic",
@@ -1076,124 +1076,88 @@
       "name": "Malaysia",
       "languages": [
         {
-          "Batek": [
-            {
-              "latitude": 4.87303,
-              "longitude": 102.328218,
-              "radius": 53,
-              "population": 1000
-            }
-          ]
+          "latitude": 4.87303,
+          "longitude": 102.328218,
+          "radius": 53,
+          "population": 1000,
+          "id": "Batek"
         },
         {
-          "Cheq Wong": [
-            {
-              "latitude": 3.569775,
-              "longitude": 101.937976,
-              "radius": 28,
-              "population": 460
-            }
-          ]
+          "latitude": 3.569775,
+          "longitude": 101.937976,
+          "radius": 28,
+          "population": 460,
+          "id": "Cheq Wong"
         },
         {
-          "Jah Hut": [
-            {
-              "latitude": 3.444552,
-              "longitude": 102.41998,
-              "radius": 60,
-              "population": 4200
-            }
-          ]
+          "latitude": 3.444552,
+          "longitude": 102.41998,
+          "radius": 60,
+          "population": 4200,
+          "id": "Jah Hut"
         },
         {
-          "Jahai": [
-            {
-              "latitude": 4.571692,
-              "longitude": 101.9723,
-              "radius": 132,
-              "population": 1000
-            }
-          ]
+          "latitude": 4.571692,
+          "longitude": 101.9723,
+          "radius": 132,
+          "population": 1000,
+          "id": "Jahai"
         },
         {
-          "Kintaq": [
-            {
-              "latitude": 5.450136,
-              "longitude": 101.136546,
-              "radius": 20,
-              "population": 110
-            }
-          ]
+          "latitude": 5.450136,
+          "longitude": 101.136546,
+          "radius": 20,
+          "population": 110,
+          "id": "Kintaq"
         },
         {
-          "Lanoh": [
-            {
-              "latitude": 5.179061,
-              "longitude": 100.979809,
-              "radius": 40,
-              "population": 200
-            }
-          ]
+          "latitude": 5.179061,
+          "longitude": 100.979809,
+          "radius": 40,
+          "population": 200,
+          "id": "Lanoh"
         },
         {
-          "Mah Meri": [
-            {
-              "latitude": 2.871123,
-              "longitude": 101.864228,
-              "radius": 70,
-              "population": 3700
-            }
-          ]
+          "latitude": 2.871123,
+          "longitude": 101.864228,
+          "radius": 70,
+          "population": 3700,
+          "id": "Mah Meri"
         },
         {
-          "Minriq": [
-            {
-              "latitude": 5.997032,
-              "longitude": 102.019117,
-              "radius": 21,
-              "population": 200
-            }
-          ]
+          "latitude": 5.997032,
+          "longitude": 102.019117,
+          "radius": 21,
+          "population": 200,
+          "id": "Minriq"
         },
         {
-          "Semai": [
-            {
-              "latitude": 4.68879,
-              "longitude": 101.370983,
-              "radius": 83,
-              "population": 45000 
-            }
-          ]
+          "latitude": 4.68879,
+          "longitude": 101.370983,
+          "radius": 83,
+          "population": 45000,
+          "id": "Semai"
         },
         {
-          "Semaq Beri": [
-            {
-              "latitude": 4.380849,
-              "longitude": 102.74198,
-              "radius": 110,
-              "population": 2500
-            }
-          ]
+          "latitude": 4.380849,
+          "longitude": 102.74198,
+          "radius": 110,
+          "population": 2500,
+          "id": "Semaq Beri"
         },
         {
-          "Temiar": [
-            {
-              "latitude": 5.60574,
-              "longitude": 101.56116,
-              "radius": 80,
-              "population": 27000 
-            }
-          ]
+          "latitude": 5.60574,
+          "longitude": 101.56116,
+          "radius": 80,
+          "population": 27000,
+          "id": "Temiar"
         },
         {
-          "Temoq": [
-            {
-              "latitude": 2.867,
-              "longitude": 102.837,
-              "radius": 20,
-              "population": 100
-            }
-          ]
+          "latitude": 2.867,
+          "longitude": 102.837,
+          "radius": 20,
+          "population": 100,
+          "id": "Temoq"
         }
       ]
     },
@@ -1201,84 +1165,60 @@
       "name": "Thailand",
       "languages": [
         {
-          "Kensiu": [
-            {
-              "latitude": 5.750109,
-              "longitude": 101.033885,
-              "radius": 50,
-              "population": 300 
-            }
-          ]
+          "latitude": 5.750109,
+          "longitude": 101.033885,
+          "radius": 50,
+          "population": 300,
+          "id": "Kensiu"
         },
         {
-          "Kuy": [
-            {
-              "latitude": 16.43216,
-              "longitude": 102.822731,
-              "radius": 200,
-              "population":  350000
-            }
-          ]
+          "latitude": 16.43216,
+          "longitude": 102.822731,
+          "radius": 200,
+          "population": 350000,
+          "id": "Kuy"
         },
         {
-          "Northern Khmer": [
-            {
-              "latitude": 15.408708,
-              "longitude": 103.682406,
-              "radius": 98,
-              "population":  1400000
-            }
-          ]
+          "latitude": 15.408708,
+          "longitude": 103.682406,
+          "radius": 98,
+          "population": 1400000,
+          "id": "Northern Khmer"
         },
         {
-          "Nyahkur": [
-            {
-              "latitude": 15.796126,
-              "longitude": 102.028717,
-              "radius": 190,
-              "population": 1500
-            }
-          ]
+          "latitude": 15.796126,
+          "longitude": 102.028717,
+          "radius": 190,
+          "population": 1500,
+          "id": "Nyahkur"
         },
         {
-          "Lawa": [
-            {
-              "latitude": 18.783625,
-              "longitude": 98.394309,
-              "radius": 150,
-              "population": 15000 
-            }
-          ]
+          "latitude": 18.783625,
+          "longitude": 98.394309,
+          "radius": 150,
+          "population": 15000,
+          "id": "Lawa"
         },
         {
-          "Wa": [
-            {
-              "latitude": 19.887814,
-              "longitude": 99.829512,
-              "radius": 60,
-              "population":  100000
-            }
-          ]
+          "latitude": 19.887814,
+          "longitude": 99.829512,
+          "radius": 60,
+          "population": 100000,
+          "id": "Wa"
         },
         {
-          "Chong": [
-            {
-              "latitude": 12.66029,
-              "longitude": 102.121016,
-              "radius": 110,
-              "population":  500
-            }
-          ]
+          "latitude": 12.66029,
+          "longitude": 102.121016,
+          "radius": 110,
+          "population": 500,
+          "id": "Chong"
         },
         {
-          "Chong of Trat": [
-            {
-              "latitude": 12.252884,
-              "longitude": 102.511894,
-              "radius": 20,
-              "population": 50  
-            }
-          ]
+          "latitude": 12.252884,
+          "longitude": 102.511894,
+          "radius": 20,
+          "population": 50,
+          "id": "Chong of Trat"
         }
       ]
     },
@@ -1286,106 +1226,81 @@
       "name": "Vietnam",
       "languages": [
         {
-          "Bahnar": [
-            {
-              "latitude": 14.401347,
-              "longitude": 108.099982,
-              "radius": 120,
-              "population": 160000
-            }
-          ]
+          "latitude": 14.401347,
+          "longitude": 108.099982,
+          "radius": 120,
+          "population": 160000,
+          "id": "Bahnar"
         },
         {
-          "Mnong": [
-            {
-              "latitude": 13.301696,
-              "longitude": 107.644032,
-              "radius": 70,
-              "population": 120000
-            }
-          ]
+          "latitude": 13.301696,
+          "longitude": 107.644032,
+          "radius": 70,
+          "population": 120000,
+          "id": "Mnong"
         },
         {
-          "Sedang": [
-            {
-              "latitude": 15.304997,
-              "longitude": 107.716718,
-              "radius": 75,
-              "population": 100000
-            }
-          ]
+          "latitude": 15.304997,
+          "longitude": 107.716718,
+          "radius": 75,
+          "population": 100000,
+          "id": "Sedang"
         },
         {
-          "Sre": [
-            {
-              "latitude": 11.306362,
-              "longitude": 107.392206,
-              "radius": 70,
-              "population": 130000
-            }
-          ]
+          "latitude": 11.306362,
+          "longitude": 107.392206,
+          "radius": 70,
+          "population": 130000,
+          "id": "Sre"
         },
         {
-          "Eastern Katu": [
-            {
-              "latitude": 16.211009,
-              "longitude": 107.717797,
-              "radius": 57,
-              "population": 60000   
-            }
-          ]
+          "latitude": 16.211009,
+          "longitude": 107.717797,
+          "radius": 57,
+          "population": 60000,
+          "id": "Eastern Katu"
         },
         {
-          "Central Khmer": [
-            {
-              "latitude": 10.021845,
-              "longitude": 105.744351,
-              "radius": 82,
-              "population": 75000  
-            }
-          ]
+          "latitude": 10.021845,
+          "longitude": 105.744351,
+          "radius": 82,
+          "population": 75000,
+          "id": "Central Khmer"
         },
         {
-          "Mang": [
-            {
-              "latitude": 22.53879,
-              "longitude": 103.25116,
-              "radius": 60,
-              "population": 4900 
-            }
-          ]
+          "latitude": 22.53879,
+          "longitude": 103.25116,
+          "radius": 60,
+          "population": 4900,
+          "id": "Mang"
         },
         {
-          "Muong": [
-            {
-              "latitude": 21.291997,
-              "longitude": 104.658006,
-              "radius": 80,
-              "population": 65000   
-            },
-            {
-              "latitude": 19.591836,
-              "longitude": 105.401107,
-              "radius": 75,
-              "population": 65000
-            }
-          ]
+          "latitude": 21.291997,
+          "longitude": 104.658006,
+          "radius": 80,
+          "population": 65000,
+          "id": "Muong"
         },
         {
-          "Vietnamese": [
-            {
-              "latitude": 21.383361,
-              "longitude": 105.377144,
-              "radius": 379,
-              "population": 3950000  
-            },
-            {
-              "latitude": 11.404852,
-              "longitude": 107.396680,
-              "radius": 154,
-              "population": 3950000
-            }
-          ]
+          "latitude": 19.591836,
+          "longitude": 105.401107,
+          "radius": 75,
+          "population": 65000,
+          "id": "Muong"
+        },
+        {
+          "latitude": 21.383361,
+          "longitude": 105.377144,
+          "radius": 379,
+          "population": 3950000,
+          "id": "Vietnamese"
+        },
+        {
+          "latitude": 11.404852,
+          "longitude": 107.39668,
+          "radius": 154,
+          "population": 3950000,
+          "id": "Vietnamese"
         }
       ]
     },
@@ -1393,14 +1308,11 @@
       "name": "Bangladesh",
       "languages": [
         {
-          "War Jaintia": [
-            {
-              "latitude": 24.849439,
-              "longitude": 91.842368,
-              "radius": 60,
-              "population": 16000  
-            }
-          ]
+          "latitude": 24.849439,
+          "longitude": 91.842368,
+          "radius": 60,
+          "population": 16000,
+          "id": "War Jaintia"
         }
       ]
     },
@@ -1408,54 +1320,39 @@
       "name": "Laos",
       "languages": [
         {
-          "Eastern Bru": [
-            {
-              "latitude": 17.284038,
-              "longitude": 105.013104,
-              "radius": 200,
-              "population": 140000  
-            }
-          ]
+          "latitude": 17.284038,
+          "longitude": 105.013104,
+          "radius": 200,
+          "population": 140000,
+          "id": "Eastern Bru"
         },
         {
-          "Kataang": [
-            {
-              "latitude": 15.678596,
-              "longitude": 106.421671,
-              "radius": 54,
-              "population": 110000  
-            }
-          ]
+          "latitude": 15.678596,
+          "longitude": 106.421671,
+          "radius": 54,
+          "population": 110000,
+          "id": "Kataang"
         },
         {
-          "Upper Ta'oih": [
-            {
-              "latitude": 16.283335,
-              "longitude": 106.946143,
-              "radius": 150,
-              "population": 60000  
-            }
-          ]
+          "latitude": 16.283335,
+          "longitude": 106.946143,
+          "radius": 150,
+          "population": 60000,
+          "id": "Upper Ta'oih"
         },
         {
-          "Kiorr": [
-            {
-              "latitude": 20.90699,
-              "longitude": 101.381963,
-              "radius": 50,
-              "population": 2400  
-            }
-          ]
+          "latitude": 20.90699,
+          "longitude": 101.381963,
+          "radius": 50,
+          "population": 2400,
+          "id": "Kiorr"
         },
         {
-          "Lamet": [
-            {
-              "latitude": 21.004075,
-              "longitude": 101.411035,
-              "radius": 30,
-              "population": 20000  
-            }
-          ]
+          "latitude": 21.004075,
+          "longitude": 101.411035,
+          "radius": 30,
+          "population": 20000,
+          "id": "Lamet"
         }
       ]
     },
@@ -1463,74 +1360,53 @@
       "name": "Cambodia",
       "languages": [
         {
-          "Central Khmer": [
-            {
-              "latitude": 12.808672,
-              "longitude": 104.932656,
-              "radius": 240,
-              "population": 75000  
-            }
-          ]
+          "latitude": 12.808672,
+          "longitude": 104.932656,
+          "radius": 240,
+          "population": 75000,
+          "id": "Central Khmer"
         },
         {
-          "Kuy": [
-            {
-              "latitude": 13.497707,
-              "longitude": 105.552071,
-              "radius": 115,
-              "population": 50000  
-            }
-          ]
+          "latitude": 13.497707,
+          "longitude": 105.552071,
+          "radius": 115,
+          "population": 50000,
+          "id": "Kuy"
         },
         {
-          "Chung": [
-            {
-              "latitude": 10.70141,
-              "longitude": 103.821141,
-              "radius": 10,
-              "population": 70  
-            }
-          ]
+          "latitude": 10.70141,
+          "longitude": 103.821141,
+          "radius": 10,
+          "population": 70,
+          "id": "Chung"
         },
         {
-          "Pear of Kampong Thom": [
-            {
-              "latitude": 12.822151,
-              "longitude": 104.947498,
-              "radius": 30,
-              "population": 50  
-            }
-          ]
+          "latitude": 12.822151,
+          "longitude": 104.947498,
+          "radius": 30,
+          "population": 50,
+          "id": "Pear of Kampong Thom"
         },
         {
-          "Samrai": [
-            {
-              "latitude": 13.090194,
-              "longitude": 103.209627,
-              "radius": 30,
-              "population": 200  
-            }
-          ]
+          "latitude": 13.090194,
+          "longitude": 103.209627,
+          "radius": 30,
+          "population": 200,
+          "id": "Samrai"
         },
         {
-          "Samre": [
-            {
-              "latitude": 12.31171,
-              "longitude": 103.594599,
-              "radius": 120,
-              "population": 1500  
-            }
-          ]
+          "latitude": 12.31171,
+          "longitude": 103.594599,
+          "radius": 120,
+          "population": 1500,
+          "id": "Samre"
         },
         {
-          "Song of Kampong Spue": [
-            {
-              "latitude": 11.461322,
-              "longitude": 104.515416,
-              "radius": 5,
-              "population": 30  
-            }
-          ]
+          "latitude": 11.461322,
+          "longitude": 104.515416,
+          "radius": 5,
+          "population": 30,
+          "id": "Song of Kampong Spue"
         }
       ]
     },
@@ -1538,126 +1414,95 @@
       "name": "India",
       "languages": [
         {
-          "Khasi": [
-            {
-              "latitude": 25.5257,
-              "longitude": 91.397301,
-              "radius": 130,
-              "population": 1000000  
-            }
-          ]
+          "latitude": 25.5257,
+          "longitude": 91.397301,
+          "radius": 130,
+          "population": 1000000,
+          "id": "Khasi"
         },
         {
-          "Pnar": [
-            {
-              "latitude": 25.380798,
-              "longitude": 92.385925,
-              "radius": 27,
-              "population": 100000  
-            }
-          ]
+          "latitude": 25.380798,
+          "longitude": 92.385925,
+          "radius": 27,
+          "population": 100000,
+          "id": "Pnar"
         },
         {
-          "War Jaintia": [
-            {
-              "latitude": 25.683275,
-              "longitude": 91.060703,
-              "radius": 102,
-              "population": 51000  
-            }
-          ]
+          "latitude": 25.683275,
+          "longitude": 91.060703,
+          "radius": 102,
+          "population": 51000,
+          "id": "War Jaintia"
         },
         {
-          "Khmu": [
-            {
-              "latitude": 22.337292,
-              "longitude": 85.391385,
-              "radius": 80,
-              "population": 600000  
-            }
-          ]
+          "latitude": 22.337292,
+          "longitude": 85.391385,
+          "radius": 80,
+          "population": 600000,
+          "id": "Khmu"
         },
         {
-          "Bhumij": [
-            {
-              "latitude": 22.585613,
-              "longitude": 85.769927,
-              "radius": 250,
-              "population": 500000  
-            }
-          ]
+          "latitude": 22.585613,
+          "longitude": 85.769927,
+          "radius": 250,
+          "population": 500000,
+          "id": "Bhumij"
         },
         {
-          "Ho": [
-            {
-              "latitude": 22.458874,
-              "longitude": 85.194453,
-              "radius": 500,
-              "population": 60000  
-            },
-            {
-              "latitude": 26.365992,
-              "longitude": 92.764565,
-              "radius": 150,
-              "population": 60000
-            }
-          ]
+          "latitude": 22.458874,
+          "longitude": 85.194453,
+          "radius": 500,
+          "population": 60000,
+          "id": "Ho"
         },
         {
-          "Kharia": [
-            {
-              "latitude": 22.432731,
-              "longitude": 83.958754,
-              "radius": 400,
-              "population": 300000  
-            }
-          ]
+          "latitude": 26.365992,
+          "longitude": 92.764565,
+          "radius": 150,
+          "population": 60000,
+          "id": "Ho"
         },
         {
-          "Korku": [
-            {
-              "latitude": 21.772732,
-              "longitude": 76.242759,
-              "radius": 200,
-              "population": 500000 
-            }
-          ]
+          "latitude": 22.432731,
+          "longitude": 83.958754,
+          "radius": 400,
+          "population": 300000,
+          "id": "Kharia"
         },
         {
-          "Mundari": [
-            {
-              "latitude": 21.371661,
-              "longitude": 85.120552,
-              "radius": 200,
-              "population": 1500000  
-            }
-          ]
+          "latitude": 21.772732,
+          "longitude": 76.242759,
+          "radius": 200,
+          "population": 500000,
+          "id": "Korku"
         },
         {
-          "Santali": [
-            {
-              "latitude": 23.576136,
-              "longitude": 86.264649,
-              "radius": 240,
-              "population": 375000 
-            },
-            {
-              "latitude": 23.576136,
-              "longitude": 92.676293,
-              "radius": 230,
-              "population": 375000
-            }
-          ]
+          "latitude": 21.371661,
+          "longitude": 85.120552,
+          "radius": 200,
+          "population": 1500000,
+          "id": "Mundari"
         },
         {
-          "Sora": [
-            {
-              "latitude": 17.215353,
-              "longitude": 82.315131,
-              "radius": 180,
-              "population": 410000  
-            }
-          ]
+          "latitude": 23.576136,
+          "longitude": 86.264649,
+          "radius": 240,
+          "population": 375000,
+          "id": "Santali"
+        },
+        {
+          "latitude": 23.576136,
+          "longitude": 92.676293,
+          "radius": 230,
+          "population": 375000,
+          "id": "Santali"
+        },
+        {
+          "latitude": 17.215353,
+          "longitude": 82.315131,
+          "radius": 180,
+          "population": 410000,
+          "id": "Sora"
         }
       ]
     },
@@ -1665,149 +1510,107 @@
       "name": "China",
       "languages": [
         {
-          "Blang": [
-            {
-              "latitude": 21.95171,
-              "longitude": 100.389468,
-              "radius": 70,
-              "population": 68000 
-            }
-          ]
+          "latitude": 21.95171,
+          "longitude": 100.389468,
+          "radius": 70,
+          "population": 68000,
+          "id": "Blang"
         },
         {
-          "Hu": [
-            {
-              "latitude": 21.999548,
-              "longitude": 100.84887,
-              "radius": 100,
-              "population": 1000  
-            }
-          ]
+          "latitude": 21.999548,
+          "longitude": 100.84887,
+          "radius": 100,
+          "population": 1000,
+          "id": "Hu"
         },
         {
-          "P'uman": [
-            {
-              "latitude": 24.012245,
-              "longitude": 99.834765,
-              "radius": 85,
-              "population": 40000  
-            }
-          ]
+          "latitude": 24.012245,
+          "longitude": 99.834765,
+          "radius": 85,
+          "population": 40000,
+          "id": "P'uman"
         },
         {
-          "Palaung": [
-            {
-              "latitude": 24.21789,
-              "longitude": 99.13552,
-              "radius": 93,
-              "population": 600000  
-            }
-          ]
+          "latitude": 24.21789,
+          "longitude": 99.13552,
+          "radius": 93,
+          "population": 600000,
+          "id": "Palaung"
         },
         {
-          "Wa": [
-            {
-              "latitude": 23.283310,
-              "longitude": 100.045720,
-              "radius": 150,
-              "population": 500000
-            }
-          ]
+          "latitude": 23.28331,
+          "longitude": 100.04572,
+          "radius": 150,
+          "population": 500000,
+          "id": "Wa"
         }
-      ] 
+      ]
     },
     {
       "name": "Myanmar",
       "languages": [
         {
-          "Mon": [
-            {
-              "latitude": 16.62865,
-              "longitude": 98.248835,
-              "radius": 120,
-              "population": 900000  
-            }
-          ]
+          "latitude": 16.62865,
+          "longitude": 98.248835,
+          "radius": 120,
+          "population": 900000,
+          "id": "Mon"
         },
         {
-          "Kano": [
-            {
-              "latitude": 20.533508,
-              "longitude": 95.42533,
-              "radius": 170,
-              "population": 5000  
-            }
-          ]
+          "latitude": 20.533508,
+          "longitude": 95.42533,
+          "radius": 170,
+          "population": 5000,
+          "id": "Kano"
         },
         {
-          "Meung Yum": [
-            {
-              "latitude": 23.408115,
-              "longitude": 98.631646,
-              "radius": 75,
-              "population": 8000  
-            }
-          ]
+          "latitude": 23.408115,
+          "longitude": 98.631646,
+          "radius": 75,
+          "population": 8000,
+          "id": "Meung Yum"
         },
         {
-          "Mok": [
-            {
-              "latitude": 21.156014,
-              "longitude": 98.155578,
-              "radius": 97,
-              "population": 4700 
-            }
-          ]
+          "latitude": 21.156014,
+          "longitude": 98.155578,
+          "radius": 97,
+          "population": 4700,
+          "id": "Mok"
         },
         {
-          "Mong Lue": [
-            {
-              "latitude": 21.133686,
-              "longitude": 99.767158,
-              "radius": 240,
-              "population": 5000  
-            }
-          ]
+          "latitude": 21.133686,
+          "longitude": 99.767158,
+          "radius": 240,
+          "population": 5000,
+          "id": "Mong Lue"
         },
         {
-          "Muak Sa-aak": [
-            {
-              "latitude": 21.169745,
-              "longitude": 100.354561,
-              "radius": 80,
-              "population": 4500 
-            }
-          ]
+          "latitude": 21.169745,
+          "longitude": 100.354561,
+          "radius": 80,
+          "population": 4500,
+          "id": "Muak Sa-aak"
         },
         {
-          "Riang": [
-            {
-              "latitude": 17.468752,
-              "longitude": 97.503645,
-              "radius": 78,
-              "population": 28000  
-            }
-          ]
+          "latitude": 17.468752,
+          "longitude": 97.503645,
+          "radius": 78,
+          "population": 28000,
+          "id": "Riang"
         },
         {
-          "Savaiq": [
-            {
-              "latitude": 23.414518,
-              "longitude": 98.647164,
-              "radius": 5,
-              "population": 10000  
-            }
-          ]
+          "latitude": 23.414518,
+          "longitude": 98.647164,
+          "radius": 5,
+          "population": 10000,
+          "id": "Savaiq"
         },
         {
-          "Wa": [
-            {
-              "latitude": 21.108238,
-              "longitude": 98.135224,
-              "radius": 360,
-              "population": 800000
-            }
-          ]
+          "latitude": 21.108238,
+          "longitude": 98.135224,
+          "radius": 360,
+          "population": 800000,
+          "id": "Wa"
         }
       ]
     },
@@ -1815,84 +1618,60 @@
       "name": "Nicobar Isalnds",
       "languages": [
         {
-          "Camorta": [
-            {
-              "latitude": 8.156931,
-              "longitude": 93.484164,
-              "radius": 5,
-              "population": 3400   
-            }
-          ]
+          "latitude": 8.156931,
+          "longitude": 93.484164,
+          "radius": 5,
+          "population": 3400,
+          "id": "Camorta"
         },
         {
-          "Car": [
-            {
-              "latitude": 9.175307,
-              "longitude": 92.779582,
-              "radius": 6,
-              "population": 37000  
-            }
-          ]
+          "latitude": 9.175307,
+          "longitude": 92.779582,
+          "radius": 6,
+          "population": 37000,
+          "id": "Car"
         },
         {
-          "Chaura": [
-            {
-              "latitude": 9.222743,
-              "longitude": 92.792103,
-              "radius": 5,
-              "population": 5900   
-            }
-          ]
+          "latitude": 9.222743,
+          "longitude": 92.792103,
+          "radius": 5,
+          "population": 5900,
+          "id": "Chaura"
         },
         {
-          "Katchal": [
-            {
-              "latitude": 7.967979,
-              "longitude": 93.359355,
-              "radius": 5,
-              "population": 5700
-            }
-          ]
+          "latitude": 7.967979,
+          "longitude": 93.359355,
+          "radius": 5,
+          "population": 5700,
+          "id": "Katchal"
         },
         {
-          "Nancowry": [
-            {
-              "latitude": 7.975354,
-              "longitude": 93.55174,
-              "radius": 3,
-              "population": 930
-            }
-          ]
+          "latitude": 7.975354,
+          "longitude": 93.55174,
+          "radius": 3,
+          "population": 930,
+          "id": "Nancowry"
         },
         {
-          "Sambelong": [
-            {
-              "latitude": 6.818277,
-              "longitude": 93.82789,
-              "radius": 5,
-              "population": 7500
-            }
-          ]
+          "latitude": 6.818277,
+          "longitude": 93.82789,
+          "radius": 5,
+          "population": 7500,
+          "id": "Sambelong"
         },
         {
-          "Shompen": [
-            {
-              "latitude": 7.019229,
-              "longitude": 93.911576,
-              "radius": 3,
-              "population": 400
-            }
-          ]
+          "latitude": 7.019229,
+          "longitude": 93.911576,
+          "radius": 3,
+          "population": 400,
+          "id": "Shompen"
         },
         {
-          "Teressa": [
-            {
-              "latitude": 8.24085,
-              "longitude": 93.128487,
-              "radius": 4,
-              "population": 2100
-            }
-          ]
+          "latitude": 8.24085,
+          "longitude": 93.128487,
+          "radius": 4,
+          "population": 2100,
+          "id": "Teressa"
         }
       ]
     }

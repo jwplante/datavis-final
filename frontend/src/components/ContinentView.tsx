@@ -22,13 +22,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
   useEffect(() => {
     const borderData = props.borderData;
     const dataModel = props.dataModel;
-    const flattenedAreas = dataModel.areas.flatMap(area => {
-      return area.languages.flatMap(d => {
-        const languageNames = Object.keys(d);
-        const locations = d[languageNames[0]].map((d, i) => { return { ...d, id: languageNames[i] }; });
-        return locations;
-      });
-    });
+    const flattenedAreas = dataModel.areas.flatMap(area => area.languages);
 
     if (borderData.type === 'FeatureCollection' && rootSVG.current) {
       const allSubdivisions = dataModel.subdivisions.map(d => d.name);
@@ -72,22 +66,23 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
         // Parchment fill
         .attr('fill', '#fcf5e5');
 
-      d3.select(rootSVG.current)
+      const langGroup = d3.select(rootSVG.current)
         .selectAll('g')
         .data(props.dataModel.areas)
         .enter()
         .append('g')
         .attr('id', d => d.name)
         .selectAll('circle')
-        .data(d => d.languages.flatMap(d => {
-          const languageNames = Object.keys(d);
-          const locations = d[languageNames[0]].map((d, i) => { return { ...d, id: languageNames[i] }; });
-          return locations;
-        }))
+        .data(d => d.languages)
         .enter()
+        .append('g')
+        .attr('class', (lang, i) => `LocationGroup_${lang.id}_${i}`);
+
+      // Add the circles in
+      langGroup
         .append('circle')
         .attr('class', d => `Circle_${d.id}`)
-        .attr('r', 2)
+        .attr('r', 4)
         .attr('fill', d => colors(d.id))
         .attr('opacity', d => opacity(d.population))
         .attr('transform', d => {
@@ -110,6 +105,22 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
             .attr('opacity', opacity(d.population))
             .attr('stroke', '#654321');
 
+          // Add the label in
+          d3.select(this.parentElement)
+            .append('text')
+            .attr('fill', 'goldenrod')
+            .style('font', '12px Arial, sans-serif')
+            .style('font-weight', 'bold')
+            .text(`Language: ${d.id} Population: ${d.population} Radius: ${d.radius} km`)
+            .attr('transform', () => {
+              return 'translate(' + proj([
+                d.longitude,
+                d.latitude
+              ]) + ')';
+            })
+            .raise();
+
+          // Raise the 'hitbox' of the OG circle
           d3.select(this)
             .attr('opacity', 0)
             .raise();
@@ -119,7 +130,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
             .attr('opacity', opacity(d.population));
 
           d3.select(this.parentElement)
-            .selectAll('path')
+            .selectAll('path, text')
             .remove();
         });
 
@@ -140,7 +151,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
           .attr('d', (d : any) => gpath(d));
 
         d3.select(rootSVG.current)
-          .selectAll('circle')
+          .selectAll('circle,text')
           .attr('transform', (d: any) => {
             return `translate( ${proj([d.longitude, d.latitude])} ) scale( ${e.transform.k / 1000} )`;
           });
