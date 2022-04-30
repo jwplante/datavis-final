@@ -8,21 +8,22 @@ import { Model } from 'types/Model';
 function App () {
   // Setting up the app state
   const initAppState = {
-    selectionType: null
+    selectedRegion: null,
+    selectedSubdivision: null
   };
 
   const reducer = (state: AppState, action: DispatchAction) => {
     const updatedState = { ...state };
     if (action.type === 'location') {
-      updatedState.selectionType = action.type;
-      updatedState.selectedValue = action.value;
+      updatedState.selectedRegion = action.value;
+    } else if (action.type === 'subdivision') {
+      updatedState.selectedSubdivision = action.value;
     } else {
       // No keys found!
       console.error(`Key ${action.type} is not a valid operation!`);
     }
     return updatedState;
   };
-  const OPTIONS = ['one', 'two', 'three'];
   const [continentDataset, setContinentDataset] = useState<GeoJSON | null>(null);
   const [locationDataset, setLocationDataset] = useState<Model | null>(null);
   const [appState, dispatch] = useReducer(reducer, initAppState);
@@ -54,10 +55,25 @@ function App () {
       <Selector
         id='lang_selector'
         formKey='selectedLanguage'
-        label='Select Language'
-        selected={appState.selectionType}
+        label='Select '
+        selected={appState.selectedSubdivision}
         dispatch={dispatch}
-        options={OPTIONS}
+        options={(() => {
+          if (locationDataset) {
+            const subdivisions = locationDataset?.areas
+              // Filter the list based on location
+              .filter(area => appState.selectedRegion ? area.name === appState.selectedRegion : true)
+              // For every language, get all subdivision names
+              .flatMap(area => area.languages)
+              .map(areaLanguage => {
+                const language = locationDataset.languages.find(e => e.name === areaLanguage.id);
+                return language ? language.subdivision : 'none';
+              });
+            return [...new Set(subdivisions)].filter(elt => elt !== 'none');
+          } else {
+            return [];
+          }
+        })()}
       />
     </>
   );

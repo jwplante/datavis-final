@@ -36,13 +36,18 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
         .attr('fill', '#064273');
 
       // Color scale
+      const getSubdivision = (language : string) => {
+        const found = dataModel.languages.find(other => language === other.name);
+        return found ? found.subdivision : '';
+      };
+
       const colors = d3.scaleOrdinal<string, string>().domain(allSubdivisions).range(colorScheme);
 
       // Opacity
       const populations = flattenedAreas.map(d => d.population);
       const opacity = d3.scaleLinear()
         .domain([Math.min(...populations), Math.max(...populations)])
-        .range([0.5, 0.9]);
+        .range([0.7, 1]);
 
       const proj = d3.geoEquirectangular()
         .scale(500)
@@ -99,7 +104,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
         .append('circle')
         .attr('class', d => `Circle_${d.id}`)
         .attr('r', 4)
-        .attr('fill', d => colors(d.id))
+        .attr('fill', d => colors(getSubdivision(d.id)))
         .attr('opacity', d => opacity(d.population))
         .attr('transform', d => {
           return 'translate(' + proj([
@@ -117,7 +122,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
             .append('path')
             .attr('d', gpath(circle()))
             .attr('stroke-width', 2)
-            .attr('fill', colors(d.id))
+            .attr('fill', colors(getSubdivision(d.id)))
             .attr('opacity', opacity(d.population))
             .attr('stroke', '#654321');
 
