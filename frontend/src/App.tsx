@@ -8,15 +8,13 @@ import { Model } from 'types/Model';
 function App () {
   // Setting up the app state
   const initAppState = {
-    selectedLanguage: null
+    selectionType: null
   };
 
   const reducer = (state: AppState, action: DispatchAction) => {
     const updatedState = { ...state };
     if (action.type === 'update') {
-      if (action.key === 'selectedLanguage' && typeof action.value === 'string') {
-        updatedState.selectedLanguage = action.value;
-      }
+      console.log('update');
     } else {
       // No keys found!
       console.error(`Key ${action.key} is not a valid key!`);
@@ -30,13 +28,13 @@ function App () {
 
   useEffect(() => {
     // Grab the dataset from the local server
-    fetch('data/map.geo.json')
+    fetch('http://localhost:8000/data/map.geo.json')
       .then(res => {
         return res.json();
       })
       .then(data => {
         // Filter the data
-        fetch('data/languages.json')
+        fetch('http://localhost:8000/data/languages.json')
           .then(res => {
             return res.json();
           })
@@ -51,13 +49,12 @@ function App () {
 
   return (
     <>
-      { (continentDataset && locationDataset) ? <ContinentView borderData={continentDataset} dataModel={locationDataset} /> : <p>Loading Dataset</p> }
-      <span>{appState.selectedLanguage}</span>
+      { (continentDataset && locationDataset) ? <ContinentView borderData={continentDataset} dataModel={locationDataset} dispatch={dispatch}/> : <p>Loading Dataset</p> }
       <Selector
         id='lang_selector'
         formKey='selectedLanguage'
         label='Select Language'
-        selected={appState.selectedLanguage}
+        selected={appState.selectionType}
         dispatch={dispatch}
         options={OPTIONS}
       />

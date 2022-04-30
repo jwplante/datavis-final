@@ -7,5 +7,6 @@ export type DispatchAction = {
 
 // Current state of the application
 export type AppState = {
-  selectedLanguage: string | null
+  selectionType: 'location' | 'subdivision' | 'language' | null
+  selectedValue?: string
 };

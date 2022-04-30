@@ -16,7 +16,7 @@ const colorScheme = [
 /**
  * Component that represents the d3 visualization of the map
  */
-export default function ContinentView (props: { borderData: GeoJSON, dataModel: Model }) {
+export default function ContinentView (props: { borderData: GeoJSON, dataModel: Model, dispatch: (event: any) => void}) {
   const rootSVG = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
@@ -50,13 +50,14 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
 
       const gpath = d3.geoPath()
         .projection(proj);
-
+      // Add a selected flag to the geo dataset
+      const plottedFeatures = borderData.features;
       // draw country boundaries
       d3.select(rootSVG.current)
         .append('g')
         .attr('id', 'countries')
         .selectAll('path')
-        .data(borderData.features)
+        .data(plottedFeatures)
         .enter()
         .append('path')
         .attr('d', function (d) { return gpath(d); })
@@ -64,7 +65,21 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
         .attr('stroke-width', 1)
         .attr('stroke', '#654321')
         // Parchment fill
-        .attr('fill', '#fcf5e5');
+        .attr('fill', '#fcf5e5')
+        // On click, select the country
+        .on('click', function (event, d) {
+          const name : string = (d.properties as any).geounit;
+          console.log(`Selected ${name}`);
+          // Do the dispatch here
+          // Modify the schema a bit
+          d3.select(rootSVG.current)
+            .select('#countries')
+            .selectAll('path')
+            .attr('fill', '#fcf5e5');
+
+          d3.select(this)
+            .attr('fill', 'darkgreen');
+        });
 
       const langGroup = d3.select(rootSVG.current)
         .selectAll('g')
