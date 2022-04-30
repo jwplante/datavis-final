@@ -71,6 +71,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
           const name : string = (d.properties as any).geounit;
           console.log(`Selected ${name}`);
           // Do the dispatch here
+          props.dispatch({ type: 'location', value: name });
           // Modify the schema a bit
           d3.select(rootSVG.current)
             .select('#countries')

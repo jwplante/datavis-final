@@ -1,8 +1,7 @@
 // Type for app dispatch types
 export type DispatchAction = {
-  type: 'update',
-  key: string,
-  value: object
+  type: 'location' | 'subdivision',
+  value: string,
 };
 
 // Current state of the application

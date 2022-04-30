@@ -13,11 +13,12 @@ function App () {
 
   const reducer = (state: AppState, action: DispatchAction) => {
     const updatedState = { ...state };
-    if (action.type === 'update') {
-      console.log('update');
+    if (action.type === 'location') {
+      updatedState.selectionType = action.type;
+      updatedState.selectedValue = action.value;
     } else {
       // No keys found!
-      console.error(`Key ${action.key} is not a valid key!`);
+      console.error(`Key ${action.type} is not a valid operation!`);
     }
     return updatedState;
   };
