@@ -121,7 +121,7 @@
         "Hu",
         "Meung Yum",
         "P'uman",
-        "Palaung ",
+        "Palaung",
         "Wa",
         "Lawa",
         "Savaiq",
@@ -586,7 +586,7 @@
     },
     {
       "id": "6a5bf42c-41f9-4479-b652-070006724969",
-      "name": "Palaung ",
+      "name": "Palaung",
       "family": "Austroasiatic",
       "subdivision": "Palaungic",
       "status": "severly endangered",
@@ -1503,6 +1503,62 @@
           "radius": 180,
           "population": 410000,
           "id": "Sora"
+        },
+        {
+          "latitude": 8.156931,
+          "longitude": 93.484164,
+          "radius": 5,
+          "population": 3400,
+          "id": "Camorta"
+        },
+        {
+          "latitude": 9.175307,
+          "longitude": 92.779582,
+          "radius": 6,
+          "population": 37000,
+          "id": "Car"
+        },
+        {
+          "latitude": 9.222743,
+          "longitude": 92.792103,
+          "radius": 5,
+          "population": 5900,
+          "id": "Chaura"
+        },
+        {
+          "latitude": 7.967979,
+          "longitude": 93.359355,
+          "radius": 5,
+          "population": 5700,
+          "id": "Katchal"
+        },
+        {
+          "latitude": 7.975354,
+          "longitude": 93.55174,
+          "radius": 3,
+          "population": 930,
+          "id": "Nancowry"
+        },
+        {
+          "latitude": 6.818277,
+          "longitude": 93.82789,
+          "radius": 5,
+          "population": 7500,
+          "id": "Sambelong"
+        },
+        {
+          "latitude": 7.019229,
+          "longitude": 93.911576,
+          "radius": 3,
+          "population": 400,
+          "id": "Shompen"
+        },
+        {
+          "latitude": 8.24085,
+          "longitude": 93.128487,
+          "radius": 4,
+          "population": 2100,
+          "id": "Teressa"
         }
       ]
     },
@@ -1611,67 +1667,6 @@
           "radius": 360,
           "population": 800000,
           "id": "Wa"
-        }
-      ]
-    },
-    {
-      "name": "Nicobar Isalnds",
-      "languages": [
-        {
-          "latitude": 8.156931,
-          "longitude": 93.484164,
-          "radius": 5,
-          "population": 3400,
-          "id": "Camorta"
-        },
-        {
-          "latitude": 9.175307,
-          "longitude": 92.779582,
-          "radius": 6,
-          "population": 37000,
-          "id": "Car"
-        },
-        {
-          "latitude": 9.222743,
-          "longitude": 92.792103,
-          "radius": 5,
-          "population": 5900,
-          "id": "Chaura"
-        },
-        {
-          "latitude": 7.967979,
-          "longitude": 93.359355,
-          "radius": 5,
-          "population": 5700,
-          "id": "Katchal"
-        },
-        {
-          "latitude": 7.975354,
-          "longitude": 93.55174,
-          "radius": 3,
-          "population": 930,
-          "id": "Nancowry"
-        },
-        {
-          "latitude": 6.818277,
-          "longitude": 93.82789,
-          "radius": 5,
-          "population": 7500,
-          "id": "Sambelong"
-        },
-        {
-          "latitude": 7.019229,
-          "longitude": 93.911576,
-          "radius": 3,
-          "population": 400,
-          "id": "Shompen"
-        },
-        {
-          "latitude": 8.24085,
-          "longitude": 93.128487,
-          "radius": 4,
-          "population": 2100,
-          "id": "Teressa"
         }
       ]
     }
