@@ -38,7 +38,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
       // Color scale
       const getSubdivision = (language : string) => {
         const found = dataModel.languages.find(other => language === other.name);
-        return found ? found.subdivision : '';
+        return found ? found.subdivision : 'Aslian';
       };
 
       const colors = d3.scaleOrdinal<string, string>().domain(allSubdivisions).range(colorScheme);
@@ -88,12 +88,13 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
         });
 
       const langGroup = d3.select(rootSVG.current)
-        .selectAll('g')
+        .selectAll('.Area')
         .data(props.dataModel.areas)
         .enter()
         .append('g')
+        .attr('class', 'Area')
         .attr('id', d => d.name)
-        .selectAll('circle')
+        .selectAll('g, circle')
         .data(d => d.languages)
         .enter()
         .append('g')
@@ -159,12 +160,6 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
         proj
           .translate([e.transform.x, e.transform.y])
           .scale(e.transform.k);
-
-        console.log(e.transform.k);
-
-        if (e.transform.k > 400) {
-          console.log('toggle adaptive map feature');
-        }
 
         // redraw map with new projection settings
         d3.select(rootSVG.current)

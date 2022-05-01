@@ -145,7 +145,7 @@ export default function NetworkView ({ dataModel, appState }) {
               return color(foundLanguage.subdivision);
             }
           }
-          return 'darkblue';
+          return 'goldenrod';
         })
         .attr('stroke', 'darkgrey')
         .attr('stroke-width', 1.5)
