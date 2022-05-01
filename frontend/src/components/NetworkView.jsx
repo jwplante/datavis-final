@@ -1,5 +1,16 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+
+/**
+ * Colorscheme from https://sashamaps.net/docs/resources/20-colors/ with 95% accessibility setting
+ */
+const colorScheme = [
+  '#e6194B', '#3cb44b', '#ffe119', '#4363d8', '#f58231',
+  '#42d4f4', '#f032e6', '#fabed4', '#469990', '#dcbeff',
+  '#9A6324', '#fffac8', '#800000', '#aaffc3', '#000075',
+  '#a9a9a9', '#ffffff', '#000000'
+];
 
 // eslint-disable-next-line react/prop-types
 export default function NetworkView ({ dataModel }) {
@@ -31,7 +42,8 @@ export default function NetworkView ({ dataModel }) {
       const height = +svg.attr('height');
       const width = +svg.attr('width');
 
-      const color = d3.scaleOrdinal(d3.schemeCategory10);
+      const allSubdivisions = dataModel.subdivisions.map(d => d.name);
+      const color = d3.scaleOrdinal().domain(allSubdivisions).range(colorScheme);
 
       const data = modelToGraph(dataModel);
 
@@ -42,7 +54,6 @@ export default function NetworkView ({ dataModel }) {
         .attr('width', '100%')
         .attr('height', '100%')
         .attr('fill', 'gray');
-
       // simulation definition
       const simulation = d3.forceSimulation(data.nodes)
         .force('link', d3.forceLink(data.links).id(d => d.id).distance(100))
@@ -64,7 +75,17 @@ export default function NetworkView ({ dataModel }) {
         .data(data.nodes)
         .enter().append('circle')
         .attr('r', d => (4 - d.group) * 10)
-        .attr('fill', d => color(d.group))
+        .attr('fill', d => {
+          if (d.group === 2) {
+            return color(d.name);
+          } else if (d.group === 3) {
+            const foundLanguage = dataModel.languages.find(l => l.name === d.name);
+            if (foundLanguage) {
+              return color(foundLanguage.subdivision);
+            }
+          }
+          return 'black';
+        })
         .attr('stroke', '#fff')
         .attr('stroke-width', 1.5)
         .call(drag(simulation));
