@@ -19,9 +19,7 @@ export default function Selector (props : SelectorProps) {
       options={props.options}
       value={props.selected}
       onChange={(_: any, value: string | null) => {
-        if (typeof value === 'string') {
-          props.dispatch({ type: 'update', key: props.formKey, value: value });
-        }
+        props.dispatch({ type: props.formKey, value: value });
       }}
       renderInput={(params) => (
         <TextField {...params} label={(props.label) ? props.label : ''} variant="standard" />

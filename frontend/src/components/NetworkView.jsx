@@ -13,18 +13,72 @@ const colorScheme = [
 ];
 
 // eslint-disable-next-line react/prop-types
-export default function NetworkView ({ dataModel }) {
+export default function NetworkView ({ dataModel, appState }) {
   const rootSVG = useRef(null);
 
   // Turns the current dataset into "proper" node data
   // the schema being {id: string, group: x}
   // family is group 1, subdivision is group 2, and language is group 3
   const modelToGraph = (data) => {
-    const familiyNodes = data.families.map(d => { return { id: d.name, name: d.name, group: 1 }; });
-    const familyLinks = data.families.flatMap(fam => fam.allEntries.map(subd => { return { source: fam.name, target: subd }; }));
-    const subdivisionNodes = data.subdivisions.map(d => { return { id: d.name, name: d.name, group: 2 }; });
-    const subdivisionLinks = data.subdivisions.flatMap(fam => fam.languages.map(subd => { return { source: fam.name, target: subd }; }));
-    const languageNodes = data.languages.map(lang => { return { id: lang.name, name: lang.name, group: 3 }; });
+    // Generate the top nodes
+    const familiyNodes = data.families.map(d => {
+      return { id: d.name, name: d.name, group: 1 };
+    });
+
+    let familyLinks = data.families.flatMap(
+      fam => fam.allEntries.map(subd => {
+        return { source: fam.name, target: subd };
+      }));
+
+    // Generate the subdivisions
+    let subdivisionNodes = data.subdivisions.map(d => { return { id: d.name, name: d.name, group: 2 }; });
+    let subdivisionLinks = data.subdivisions.flatMap(fam => fam.languages.map(subd => { return { source: fam.name, target: subd }; }));
+
+    // Generate the languages
+    let languageNodes = data.languages.map(lang => { return { id: lang.name, name: lang.name, group: 3 }; });
+
+    if (appState.selectedRegion && appState.selectedSubdivision) {
+      // Find the list of allowed languages
+      const selectedArea = data.areas.find(area => area.name === appState.selectedRegion);
+
+      let allowedLangs = [];
+      if (selectedArea) {
+        const languagesWithinArea = new Set(selectedArea.languages.map(lang => lang.id));
+        const lanugagesWithinSubdivision = new Set(data.languages.filter(lang => lang.subdivision === appState.selectedSubdivision).map(lang => lang.name));
+        allowedLangs = [...new Set([...languagesWithinArea].filter(i => lanugagesWithinSubdivision.has(i)))];
+      };
+
+      // Apply filters
+      familyLinks = familyLinks.filter(link => link.target === appState.selectedSubdivision);
+      subdivisionNodes = subdivisionNodes.filter(sub => sub.name === appState.selectedSubdivision);
+      subdivisionLinks = subdivisionLinks.filter(sub => sub.source === appState.selectedSubdivision && allowedLangs.includes(sub.target));
+      languageNodes = languageNodes.filter(lang => allowedLangs.includes(lang.name));
+    } else if (appState.selectedRegion) {
+      // Find the list of allowed languages
+      const selectedArea = data.areas.find(area => area.name === appState.selectedRegion);
+
+      let allowedLangs = [];
+      let allowedSubdivisions = [];
+      if (selectedArea) {
+        allowedLangs = selectedArea.languages.map(lang => lang.id);
+        allowedSubdivisions = data.languages.filter(lang => allowedLangs.includes(lang.name)).map(lang => lang.subdivision);
+      };
+
+      // Apply filters
+      familyLinks = familyLinks.filter(link => allowedSubdivisions.includes(link.target));
+      subdivisionNodes = subdivisionNodes.filter(sub => allowedSubdivisions.includes(sub.name));
+      subdivisionLinks = subdivisionLinks.filter(sub => allowedSubdivisions.includes(sub.source) && allowedLangs.includes(sub.target));
+      languageNodes = languageNodes.filter(lang => allowedLangs.includes(lang.name));
+    } else if (appState.selectedSubdivision) {
+      // Find the specific subdivision
+      const allowedLangs = data.subdivisions.find(subd => subd.name === appState.selectedSubdivision).languages;
+
+      // Apply filters
+      familyLinks = familyLinks.filter(link => link.target === appState.selectedSubdivision);
+      subdivisionNodes = subdivisionNodes.filter(sub => sub.name === appState.selectedSubdivision);
+      subdivisionLinks = subdivisionLinks.filter(sub => sub.source === appState.selectedSubdivision);
+      languageNodes = languageNodes.filter(lang => allowedLangs.includes(lang.name));
+    }
 
     const nodes = [...familiyNodes, ...subdivisionNodes, ...languageNodes];
     const links = [...familyLinks, ...subdivisionLinks];
@@ -38,6 +92,9 @@ export default function NetworkView ({ dataModel }) {
       // on click region: (title of network viz becomes region name)
       // tree needs to go langauge family -> subdivision -> language
       const svg = d3.select(rootSVG.current);
+
+      // Clear the visualization before we start
+      svg.selectAll('*').remove();
 
       const height = +svg.attr('height');
       const width = +svg.attr('width');
@@ -57,8 +114,11 @@ export default function NetworkView ({ dataModel }) {
       // simulation definition
       const simulation = d3.forceSimulation(data.nodes)
         .force('link', d3.forceLink(data.links).id(d => d.id).distance(100))
-        .force('charge', d3.forceManyBody().strength(-10))
+        .force('charge', d3.forceManyBody().strength(-30))
         .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collision', d3.forceCollide().radius(function (d) {
+          return (4 - d.group) * 12;
+        }))
         .force('y', d3.forceY(d => 200 * (d.group - 1)));
 
       // drawing nodes and links
@@ -73,8 +133,9 @@ export default function NetworkView ({ dataModel }) {
       const node = svg.append('g')
         .selectAll('circle')
         .data(data.nodes)
-        .enter().append('circle')
-        .attr('r', d => (4 - d.group) * 10)
+        .enter()
+        .append('circle')
+        .attr('r', d => (4 - d.group) * 12)
         .attr('fill', d => {
           if (d.group === 2) {
             return color(d.name);
@@ -84,11 +145,22 @@ export default function NetworkView ({ dataModel }) {
               return color(foundLanguage.subdivision);
             }
           }
-          return 'black';
+          return 'darkblue';
         })
-        .attr('stroke', '#fff')
+        .attr('stroke', 'darkgrey')
         .attr('stroke-width', 1.5)
         .call(drag(simulation));
+
+      const label = svg.append('g')
+        .selectAll('text')
+        .data(data.nodes)
+        .enter()
+        .append('text')
+        .attr('fill', 'black')
+        .attr('text-anchor', 'middle')
+        .style('font', '12px Arial, sans-serif')
+        .style('font-weight', 'bold')
+        .text(d => d.name);
 
       node.append('title')
         .text(d => d.id);
@@ -100,6 +172,11 @@ export default function NetworkView ({ dataModel }) {
           .attr('y1', d => d.source.y)
           .attr('x2', d => d.target.x)
           .attr('y2', d => d.target.y);
+
+        label
+          .attr('transform', function (d) {
+            return `translate(${d.x},${d.y})`;
+          });
 
         node
           .attr('cx', d => d.x)
@@ -130,7 +207,7 @@ export default function NetworkView ({ dataModel }) {
           .on('end', dragended);
       }
     }
-  }, []);
+  }, [appState]);
 
   return <svg width={800} height={600} ref={rootSVG}></svg>;
 };

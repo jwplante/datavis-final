@@ -18,6 +18,7 @@ function App () {
     const updatedState = { ...state };
     if (action.type === 'location') {
       updatedState.selectedRegion = action.value;
+      updatedState.selectedSubdivision = null;
     } else if (action.type === 'subdivision') {
       updatedState.selectedSubdivision = action.value;
     } else {
@@ -90,7 +91,7 @@ function App () {
             <Typography variant="h3" gutterBottom component="div" sx={ { margin: '5px' } }>
               Explore Filtered Languages
             </Typography>
-            { (continentDataset && locationDataset) ? <NetworkView dataModel={locationDataset} /> : <p></p> }
+            { (continentDataset && locationDataset) ? <NetworkView dataModel={locationDataset} appState={appState}/> : <p></p> }
           </Paper>
         </Grid>
       </Grid>

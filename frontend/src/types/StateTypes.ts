@@ -1,6 +1,6 @@
 // Type for app dispatch types
 export type DispatchAction = {
-  type: 'location' | 'subdivision',
+  type: 'location' | 'subdivision' | 'location_clear',
   value: string,
 };
 
