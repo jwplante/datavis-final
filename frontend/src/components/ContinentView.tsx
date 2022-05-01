@@ -193,7 +193,7 @@ export default function ContinentView (props: { borderData: GeoJSON, dataModel: 
   }, [props.borderData]);
 
   return (
-    <svg ref={rootSVG} width={800} height={600}>
+    <svg ref={rootSVG} width='100%' height='600'>
     </svg>
   );
 };

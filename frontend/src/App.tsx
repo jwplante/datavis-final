@@ -1,9 +1,11 @@
 import React, { useEffect, useReducer, useState } from 'react';
 import { GeoJSON } from 'geojson';
+import { Model } from 'types/Model';
 import { AppState, DispatchAction } from 'types/StateTypes';
 import ContinentView from 'components/ContinentView';
 import Selector from 'components/Selector';
-import { Model } from 'types/Model';
+import NetworkView from 'components/NetworkView';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 
 function App () {
   // Setting up the app state
@@ -50,32 +52,49 @@ function App () {
   }, []);
 
   return (
-    <>
-      { (continentDataset && locationDataset) ? <ContinentView borderData={continentDataset} dataModel={locationDataset} dispatch={dispatch}/> : <p>Loading Dataset</p> }
-      <Selector
-        id='lang_selector'
-        formKey='selectedLanguage'
-        label='Select '
-        selected={appState.selectedSubdivision}
-        dispatch={dispatch}
-        options={(() => {
-          if (locationDataset) {
-            const subdivisions = locationDataset?.areas
-              // Filter the list based on location
-              .filter(area => appState.selectedRegion ? area.name === appState.selectedRegion : true)
-              // For every language, get all subdivision names
-              .flatMap(area => area.languages)
-              .map(areaLanguage => {
-                const language = locationDataset.languages.find(e => e.name === areaLanguage.id);
-                return language ? language.subdivision : 'none';
-              });
-            return [...new Set(subdivisions)].filter(elt => elt !== 'none');
-          } else {
-            return [];
-          }
-        })()}
-      />
-    </>
+    <Box component='div' sx={ { display: 'flex', alignItems: 'stretch', margin: '1em' } }>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <Paper elevation={2}>
+            <Typography variant="h3" gutterBottom component="div" sx={ { margin: '5px' } }>
+              Select Location and Subdivision
+            </Typography>
+            { (continentDataset && locationDataset) ? <ContinentView borderData={continentDataset} dataModel={locationDataset} dispatch={dispatch}/> : <p>Loading Dataset</p> }
+            <Selector
+              id='lang_selector'
+              formKey='subdivision'
+              label='Select Subdivision'
+              selected={appState.selectedSubdivision}
+              dispatch={dispatch}
+              options={(() => {
+                if (locationDataset) {
+                  const subdivisions = locationDataset?.areas
+                    // Filter the list based on location
+                    .filter(area => appState.selectedRegion ? area.name === appState.selectedRegion : true)
+                    // For every language, get all subdivision names
+                    .flatMap(area => area.languages)
+                    .map(areaLanguage => {
+                      const language = locationDataset.languages.find(e => e.name === areaLanguage.id);
+                      return language ? language.subdivision : 'none';
+                    });
+                  return [...new Set(subdivisions)].filter(elt => elt !== 'none');
+                } else {
+                  return [];
+                }
+              })()}
+          />
+          </Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper elevation={2}>
+            <Typography variant="h3" gutterBottom component="div" sx={ { margin: '5px' } }>
+              Explore Filtered Languages
+            </Typography>
+            { (continentDataset && locationDataset) ? <NetworkView dataModel={locationDataset} /> : <p></p> }
+          </Paper>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 
