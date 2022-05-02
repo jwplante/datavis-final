@@ -16,7 +16,7 @@ export default function AboutMenu (props: {open: boolean, closeMenu:() => void})
       <DialogContent dividers>
           <DialogContentText id="alert-dialog-description">
             This app was written by James Plante and Alicia Howell-Munson, 2022
-            More information about this app can be found here: <a href='https://google.com'>Link to Video demo</a>
+            More information about this app can be found here: <a href='https://www.youtube.com/watch?v=u3QERUBHgT8'>Link to Video demo</a>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
